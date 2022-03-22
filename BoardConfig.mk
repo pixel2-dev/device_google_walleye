@@ -18,12 +18,15 @@ TARGET_BOOTLOADER_BOARD_NAME := walleye
 DEFAULT_LOW_PERSISTENCE_MODE_BRIGHTNESS := 0x00000056
 
 include device/google/wahoo/BoardConfig.mk
--include vendor/google_devices/muskie/proprietary/BoardConfigVendor.mk
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1920
+TARGET_SCREEN_WIDTH := 1080
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 33554432
 
 #sepolicy common to muskie/walleye
-BOARD_VENDOR_SEPOLICY_DIRS += device/google/muskie/sepolicy
+BOARD_VENDOR_SEPOLICY_DIRS += device/google/walleye/sepolicy
 
 # Testing related defines
 BOARD_PERFSETUP_SCRIPT := platform_testing/scripts/perf-setup/wahoo-setup.sh
@@ -33,6 +36,9 @@ BOARD_LISA_TARGET_SCRIPTS := device/google/wahoo/lisa/
 # VTS DTBO Verification. This kernel cmdline parameter should be added by the bootloader
 # for all future devices.
 BOARD_KERNEL_CMDLINE += androidboot.dtbo_idx=3
+
+# Display
+ TARGET_SCREEN_DENSITY := 420
 
 TARGET_RECOVERY_UI_LIB := \
     librecovery_ui_walleye \
