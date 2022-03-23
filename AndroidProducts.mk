@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_walleye.mk
+    $(LOCAL_DIR)/statix_walleye.mk

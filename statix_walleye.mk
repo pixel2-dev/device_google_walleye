@@ -26,8 +26,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Statix stuff.
+$(call inherit-product, vendor/statix/config/common.mk)
+$(call inherit-product, vendor/statix/config/gsm.mk)
+
+INCLUDE_PIXEL_LAUNCHER := true
 
 # Inherit product speciifc makefiles
 $(call inherit-product, device/google/walleye/device.mk)
@@ -35,7 +38,7 @@ $(call inherit-product, vendor/google/walleye/walleye-vendor.mk)
 
 PRODUCT_MANUFACTURER := Google
 PRODUCT_BRAND := google
-PRODUCT_NAME := lineage_walleye
+PRODUCT_NAME := statix_walleye
 PRODUCT_DEVICE := walleye
 PRODUCT_MODEL := Pixel 2
 
