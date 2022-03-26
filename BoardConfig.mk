@@ -46,3 +46,6 @@ TARGET_RECOVERY_UI_LIB := \
 
 # Kernel
 TARGET_KERNEL_CONFIG := lineageos_muskie_defconfig
+
+# TWRP
+TARGET_PREBUILT_RECOVERY_RAMDISK_IMG := device/google/walleye/twrp-ramdisk
